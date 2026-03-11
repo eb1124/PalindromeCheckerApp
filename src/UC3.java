@@ -1,4 +1,20 @@
-package PACKAGE_NAME;
-
 public class UC3 {
+
+    public static void main(String[] args) {
+
+        String original = "racecar";
+
+        // Reverse the string using a loop
+        String reversed = "";
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed += original.charAt(i);  // String concatenation in a loop
+        }
+
+        // Compare original and reversed strings
+        if (original.equals(reversed)) {
+            System.out.println("The string \"" + original + "\" is a PALINDROME.");
+        } else {
+            System.out.println("The string \"" + original + "\" is NOT a palindrome.");
+        }
+    }
 }
