@@ -1,0 +1,37 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class UC7 {
+
+    public static void main(String[] args) {
+
+        String input = "level";
+
+        // Create a Deque
+        Deque<Character> deque = new LinkedList<>();
+
+        // Insert each character into the deque
+        for (char ch : input.toCharArray()) {
+            deque.addLast(ch);
+        }
+
+        boolean isPalindrome = true;
+
+        // Compare front and rear elements
+        while (deque.size() > 1) {
+            char front = deque.removeFirst();
+            char rear = deque.removeLast();
+            if (front != rear) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        // Output the result
+        if (isPalindrome) {
+            System.out.println("The string \"" + input + "\" is a PALINDROME.");
+        } else {
+            System.out.println("The string \"" + input + "\" is NOT a palindrome.");
+        }
+    }
+}
