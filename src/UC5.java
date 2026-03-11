@@ -1,0 +1,30 @@
+import java.util.Stack;
+
+public class UC5 {
+
+    public static void main(String[] args) {
+
+        String input = "madam";
+
+        // Create a stack to hold characters
+        Stack<Character> stack = new Stack<>();
+
+        // Push each character onto the stack
+        for (int i = 0; i < input.length(); i++) {
+            stack.push(input.charAt(i));
+        }
+
+        // Build the reversed string by popping from the stack
+        String reversed = "";
+        while (!stack.isEmpty()) {
+            reversed += stack.pop();
+        }
+
+        // Compare original and reversed strings
+        if (input.equals(reversed)) {
+            System.out.println("The string \"" + input + "\" is a PALINDROME.");
+        } else {
+            System.out.println("The string \"" + input + "\" is NOT a palindrome.");
+        }
+    }
+}
