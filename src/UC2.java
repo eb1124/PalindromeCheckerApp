@@ -1,0 +1,24 @@
+public class UC2 {
+
+    public static void main(String[] args) {
+
+        // Hardcoded string
+        String word = "madam";
+
+        // Reverse the string
+        String reversed = "";
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed += word.charAt(i);
+        }
+
+        // Check if it is a palindrome
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a PALINDROME.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a palindrome.");
+        }
+
+        // Program exits
+        System.out.println("Program execution completed.");
+    }
+}
