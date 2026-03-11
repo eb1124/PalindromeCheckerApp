@@ -1,0 +1,41 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class UC6 {
+
+    public static void main(String[] args) {
+
+        String input = "radar";
+
+        // Create a queue and stack
+        Queue<Character> queue = new LinkedList<>();
+        Stack<Character> stack = new Stack<>();
+
+        // Enqueue and push each character
+        for (char ch : input.toCharArray()) {
+            queue.offer(ch);   // enqueue (FIFO)
+            stack.push(ch);    // push (LIFO)
+        }
+
+        boolean isPalindrome = true;
+
+        // Compare dequeue and pop
+        while (!queue.isEmpty()) {
+            char queueChar = queue.poll();   // dequeue from queue
+            char stackChar = stack.pop();    // pop from stack
+
+            if (queueChar != stackChar) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        // Output the result
+        if (isPalindrome) {
+            System.out.println("The string \"" + input + "\" is a PALINDROME.");
+        } else {
+            System.out.println("The string \"" + input + "\" is NOT a palindrome.");
+        }
+    }
+}
