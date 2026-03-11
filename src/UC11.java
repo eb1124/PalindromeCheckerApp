@@ -19,16 +19,20 @@ public class UC11{
                 return false;
             }
         }
+
         return true;
     }
 
     public static void main(String[] args) {
-        PalindromeChecker checker = new PalindromeChecker();
+        UC11 checker = new UC11();
 
+        // Test strings
         String test1 = "racecar";
         String test2 = "Hello";
+        String test3 = "A man a plan a canal Panama";
 
         System.out.println("\"" + test1 + "\" is palindrome? " + checker.checkPalindrome(test1));
         System.out.println("\"" + test2 + "\" is palindrome? " + checker.checkPalindrome(test2));
+        System.out.println("\"" + test3 + "\" is palindrome? " + checker.checkPalindrome(test3));
     }
 }
